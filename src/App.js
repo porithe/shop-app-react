@@ -8,6 +8,7 @@ import Shoes from './components/Shoes/Shoes';
 import Clothing from './components/Clothing/Clothing';
 import Accessories from './components/Accessories/Accessories';
 import Lookbook from './components/Lookbook/Lookbook';
+import Shopcart from './components/Shopcart/Shopcart';
 
 const AppBlock = styled.div`
     width: 100%;
@@ -27,6 +28,7 @@ const App = () => (
             <Route path={"/clothing"} component={Clothing} />
             <Route path={"/accessories"} component={Accessories} />
             <Route path={"/lookbook"} component={Lookbook} />
+            <Route path={"/shopcart"} component={Shopcart} />
         </AppBlock>
     </Router>
 
