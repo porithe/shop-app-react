@@ -189,11 +189,11 @@ const ShopCart = styled(Link)`
         font-size: 2.2rem;
     }
     @media (min-width: 1025px) and (max-width: 1280px) {
-        margin-right: 30px;
+        margin-right: 60px;
         font-size: 2.6rem;
     }
     @media (min-width: 1281px) {
-        margin-right: 40px;
+        margin-right: 100px;
         font-size: 3rem;
     }
 
@@ -222,7 +222,6 @@ class Nav extends Component {
             this.setState({
                 show: false,
             });
-            console.log('kliked');
         };
         const showNav = () => {
             this.setState({
@@ -248,10 +247,10 @@ class Nav extends Component {
 
                 <Links theme={themeLinks}>
                     <ExitIcon className="fas fa-times" onClick={hideNav}></ExitIcon>
-                    <StyledLink to={"/"}>shoes</StyledLink>
-                    <StyledLink to={"/clothing"}>clothing</StyledLink>
-                    <StyledLink to={"/accessories"}>accessories</StyledLink>
-                    <StyledLink to={"/lookbook"}>lookbook</StyledLink>
+                    <StyledLink onClick={hideNav} to={"/"}>shoes</StyledLink>
+                    <StyledLink onClick={hideNav} to={"/clothing"}>clothing</StyledLink>
+                    <StyledLink onClick={hideNav} to={"/accessories"}>accessories</StyledLink>
+                    <StyledLink onClick={hideNav} to={"/lookbook"}>lookbook</StyledLink>
                 </Links>
 
                 <ShopCart to={"/shopcart"} className="fas fa-shopping-cart"></ShopCart>
