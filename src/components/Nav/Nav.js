@@ -38,7 +38,7 @@ const LogoType = styled.h1`
         bottom: 0px;
         left: 50%;
         transform: translateX(-50%);
-        width: 90px;
+        width: 110px;
         height: 18px;
         background-color: ${colors.green};
         z-index: -1;
@@ -46,7 +46,7 @@ const LogoType = styled.h1`
     @media (min-width: 420px) and (max-width: 480px) {
         font-size: 2.5rem;
         ::after {
-            width: 110px;
+            width: 130px;
             height: 22px;
         }
     }
@@ -54,32 +54,32 @@ const LogoType = styled.h1`
           margin-left: 30px;
           font-size: 3rem;
          ::after {
-             width: 130px;
+             width: 160px;
              height: 24px;
          }
           
     }
     @media (min-width: 768px)  and (max-width: 1024px){
         margin-left: 20px;
-        font-size: 3.2rem;
+        font-size: 3rem;
         ::after {
-             width: 140px;
+             width: 160px;
              height: 26px;
          }
     }
     @media (min-width: 1025px) and (max-width: 1280px) {
         margin-left: 50px;
-        font-size: 3.6rem;
+        font-size: 3.3rem;
         ::after {
-             width: 155px;
+             width: 180px;
              height: 28px;
          }
     }
     @media (min-width: 1281px) {
-        margin-left: 60px;
-        font-size: 4rem;
+        margin-left: 80px;
+        font-size: 3.7rem;
         ::after {
-             width: 170px;
+             width: 205px;
              height: 34px;
          }
     }
@@ -127,7 +127,7 @@ const StyledLink = styled(Link)`
             left: 50%;
             transform: translateX(-50%);
             width: 0%;
-            height: 2px;
+            height: 3px;
             background-color: ${colors.green};
             transition: .3s;
         }
@@ -136,21 +136,20 @@ const StyledLink = styled(Link)`
         }
     }
     @media (min-width: 768px) and (max-width: 1024px) {
-        font-size: 2rem;
-        margin: 0 2px 0 2px;
+        font-size: 1.6rem;
     }
     @media (min-width: 1025px) and (max-width: 1280px) {
-        font-size: 2.3rem;
+        font-size: 2rem;
         margin: 0 5px 0 5px;
     }
     @media (min-width: 1281px) {
-        font-size: 2.6rem;        
+        font-size: 2.4rem;        
         margin: 0 10px 0 10px;
     }
 `;
 const MenuIcon = styled.span`
     position: absolute;
-    top: 10px;
+    top: 8px;
     right: 10px;
     font-size: 2.6rem;
     color: ${colors.black};
@@ -158,10 +157,13 @@ const MenuIcon = styled.span`
     @media (min-width: 768px) {
         display: none;
     }
+    @media (min-width: 481px) and (max-width: 767px) {
+        top: 10px; 
+    }
 `;
 const ExitIcon = styled.span`
     position: absolute;
-    top: 10px;
+    top: 8px;
     right: 10px;
     font-size: 2.6rem;
     color: ${colors.white};
@@ -169,15 +171,21 @@ const ExitIcon = styled.span`
     @media (min-width: 768px) {
         display: none;
     }
+    @media (min-width: 481px) and (max-width: 767px) {
+        top: 10px; 
+    }
 `;
 const ShopCart = styled(Link)`
     position: absolute;
-    top: 14px;
+    top: 12px;
     right: 65px;
     font-size: 2rem;
     color: ${colors.black};
     padding: 5px;
     text-decoration: none;
+    @media (min-width: 481px) and (max-width: 767px) {
+        top: 13px; 
+    }
     @media (min-width: 768px) {
         position: relative;
         top: auto;
