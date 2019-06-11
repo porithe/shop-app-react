@@ -10,6 +10,7 @@ import Accessories from './components/Accessories/Accessories';
 import Lookbook from './components/Lookbook/Lookbook';
 import Shopcart from './components/Shopcart/Shopcart';
 
+
 const AppBlock = styled.div`
     width: 100%;
     min-height: 100vh;
@@ -22,8 +23,6 @@ const App = () => (
     <Router>
         <AppBlock>
             <Nav />
-
-
             <Route exact path="/" component={Shoes} />
             <Route path={"/clothing"} component={Clothing} />
             <Route path={"/accessories"} component={Accessories} />

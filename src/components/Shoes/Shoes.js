@@ -1,18 +1,24 @@
 import React, {Component} from 'react';
 import styled from 'styled-components';
 import AliceCarousel from 'react-alice-carousel'
-import "react-alice-carousel/lib/alice-carousel.css"
+import "./alice-carousel.css"
 import { colors } from '../../template/colors';
 
 import nmdgrey from '../../photos/nmdr1grey.jpg';
-import nmdblack from '../../photos/nmdr1black.jpg';
 import adizero from '../../photos/adizerotakumi.jpg';
 import deerupt from '../../photos/deerupt.jpg';
+import ultraboost from '../../photos/ultraboost.jpg';
+import dragonball from '../../photos/dragonball.jpg';
+import harden from '../../photos/harden.jpg';
 
 const ShoesBlock = styled.div`
     width: 100%;
-    height: 100%;
+    height: calc(100vh - 60px);
     position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
     @media (min-width: 481px) and (max-width: 767px) {
         height: calc(100vh - 70px);
     }
@@ -26,14 +32,11 @@ const ShoesBlock = styled.div`
         height: calc(100vh - 180px);
     }
 `;
-const CustomAliceCarousel = styled(AliceCarousel)`
-    width: 100%;
-    height: 100%;
-`;
 const ItemCarousel = styled.div`
     width: 100%;
-    height: calc(100vh - 60px);
+    height: 100%;
     display: flex;
+    justify-content: center;
     align-items: center;
     flex-direction: column;
 `;
@@ -73,15 +76,24 @@ const AddToCartButton = styled.button`
     background-color: ${colors.green};
     color: ${colors.white};
     position: relative;
+    cursor: pointer;
     ::after {
         position: absolute;
         top: 50%;
         left: 50%;
         transform: translate(-50%,-50%);
-        content: '+';
-        font-size: 3rem;
+        content: '\f067';
+        font-size: 1.7rem;
         font-weight: 600;
+        font-family: "Font Awesome 5 Free";
     }
+`;
+const Buttons = styled.div`
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 50px 0 50px;
 `;
 const PrevButton = styled.button`
     width: 80px;
@@ -89,9 +101,7 @@ const PrevButton = styled.button`
     background-color: transparent;
     border: 2px solid ${colors.black};
     border-radius: 50%;
-    position: absolute;
-    bottom: 40px;
-    left: 50px;
+    cursor: pointer;
     ::after {
         font-family: "Font Awesome 5 Free";
         content: '\f053';
@@ -106,9 +116,7 @@ const NextButton = styled.button`
     background-color: transparent;
     border: 2px solid ${colors.black};
     border-radius: 50%;
-    position: absolute;
-    bottom: 40px;
-    right: 50px;
+    cursor: pointer;
     ::after {
         font-family: "Font Awesome 5 Free";
         content: '\f054';
@@ -126,14 +134,24 @@ class Shoes extends Component {
             price: 180,
         },
         {
-            title: 'ADIDAS NMD_R1 PRIMEKNIT.',
-            image: nmdblack,
-            price: 210,
+            title: 'ADIDAS ULTRABOOST UNCAGED.',
+            image: ultraboost,
+            price: 330,
         },
         {
-            title: 'ADIDAS DEERUPT S.',
+            title: 'ADIDAS DRAGONBALL EQT.',
+            image: dragonball,
+            price: 360,
+        },
+        {
+            title: 'ADIDAS DEERUPT RUNNER S.',
             image: deerupt,
             price: 230,
+        },
+        {
+            title: 'ADIDAS HARDEN VOL. 3',
+            image: harden,
+            price: 340,
         },
         {
             title: 'ADIDAS ADIZERO TAKUMI.',
@@ -161,10 +179,12 @@ class Shoes extends Component {
 
         return (
             <ShoesBlock>
-                <CustomAliceCarousel ref={(el) => (this.Carousel = el)} buttonsDisabled={true} dotsDisabled={true} items={this.state.shopItems}>
-                </CustomAliceCarousel>
-                <PrevButton onClick={() => this.Carousel._slidePrev()} />
-                <NextButton onClick={() => this.Carousel._slideNext()} />
+                <AliceCarousel ref={(el) => (this.Carousel = el)} buttonsDisabled={true} dotsDisabled={true} items={this.state.shopItems}>
+                </AliceCarousel>
+                <Buttons>
+                    <PrevButton onClick={() => this.Carousel._slidePrev()} />
+                    <NextButton onClick={() => this.Carousel._slideNext()} />
+                </Buttons>
             </ShoesBlock>
         );
     }
