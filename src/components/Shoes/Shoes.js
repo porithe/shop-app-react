@@ -14,7 +14,6 @@ import harden from '../../photos/harden.jpg';
 const ShoesBlock = styled.div`
     width: 100%;
     height: calc(100vh - 60px);
-    position: relative;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -30,6 +29,8 @@ const ShoesBlock = styled.div`
     }
     @media (min-width: 1281px) {
         height: calc(100vh - 180px);
+        justify-content: flex-start;
+        padding-top: 50px;
     }
 `;
 const ItemCarousel = styled.div`
@@ -42,13 +43,51 @@ const ItemCarousel = styled.div`
 `;
 const Image = styled.img`
     width: 300px;
+    @media (min-width: 481px) and (max-width: 630px) {
+        width: 400px;
+    }
+    @media (min-width: 631px) and (max-width: 767px) {
+        width: 450px;
+    }
+    @media (min-width: 768px) and (max-width: 1024px) {
+        width: 550px;  
+    }
+    @media (min-width: 1025px) and (max-width: 1280px) {
+        width: 670px;
+    }
+    @media (min-width: 1281px) {
+        width: 750px;
+    }
 `;
-const TypeOfBoots = styled.h2`
+const TextBlock = styled.div`
+    width: 200px;
+    padding: 10px;
+    text-align: center;
+    @media (min-width: 481px) and (max-width: 767px) {
+        width: 250px;
+  
+    }
+    @media (min-width: 768px) {
+        width: auto;
+    }
+`;
+const TextBoots = styled.h2`
     font-size: 2rem;
     text-align: center;
     color: ${colors.black};
-    padding: 20px 60px 0 60px;
     font-weight: 500;
+    @media (min-width: 481px) and (max-width: 767px) {
+        font-size: 2.3rem;
+    }
+    @media (min-width: 768px) and (max-width: 1024px) {
+        font-size: 2.7rem; 
+    }
+    @media (min-width: 1025px) and (max-width: 1280px) {
+        font-size: 3.1rem;
+    }
+    @media (min-width: 1281px) {
+        font-size: 3.5rem;
+    }
 `;
 const PriceButtonBlock = styled.div`
     width: 100%;
@@ -57,16 +96,44 @@ const PriceButtonBlock = styled.div`
     justify-content: space-between;
     align-items: center;
     padding: 0 30px 0 20px;
+    @media (min-width: 768px) {
+        padding: 0;
+        width: 85%;
+    }
 `;
 const Price = styled.h2`
     text-align: left;
     font-size: 1.8rem;
     font-weight: 300;
+    @media (min-width: 481px) and (max-width: 767px) {
+        font-size: 2rem;
+    }
+    @media (min-width: 768px) and (max-width: 1024px) {
+        font-size: 2.3rem; 
+    }
+    @media (min-width: 1025px) and (max-width: 1280px) {
+        font-size: 2.6rem;
+    }
+    @media (min-width: 1281px) {
+        font-size: 2.9rem;
+    }
 `;
 const Dolar = styled.span`
     color: ${colors.green};
     font-weight: 500;
     font-size: 2rem;
+    @media (min-width: 481px) and (max-width: 767px) {
+        font-size: 2.3rem;
+    }
+    @media (min-width: 768px) and (max-width: 1024px) {
+        font-size: 2.7rem; 
+    }
+    @media (min-width: 1025px) and (max-width: 1280px) {
+        font-size: 3.1rem;
+    }
+    @media (min-width: 1281px) {
+        font-size: 3.5rem;
+    }
 `;
 const AddToCartButton = styled.button`
     width: 50px;
@@ -87,6 +154,31 @@ const AddToCartButton = styled.button`
         font-weight: 600;
         font-family: "Font Awesome 5 Free";
     }
+    @media (min-width: 481px) and (max-width: 767px) {
+        width: 60px;
+        height: 60px;
+        ::after {
+            font-size: 2.2rem;
+        }
+    }
+    @media (min-width: 768px) {
+        width: 220px;
+        height: 55px;
+        border-radius: 25px 25px;
+        background-color: ${colors.background};
+        color: ${colors.green};
+        border: 2px solid ${colors.green};
+        transition: .3s;
+        ::after {
+            content: 'Add to cart';
+            font-family: 'Montserrat', sans-serif;
+            font-size: 1.7rem;
+            width: 220px;
+        }
+        :hover {
+            box-shadow: 0 0 7px 0 ${colors.green};
+        }
+    }
 `;
 const Buttons = styled.div`
     width: 100%;
@@ -94,6 +186,11 @@ const Buttons = styled.div`
     display: flex;
     justify-content: space-between;
     padding: 0 50px 0 50px;
+    @media (min-width: 768px) {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+    }
 `;
 const PrevButton = styled.button`
     width: 80px;
@@ -109,6 +206,7 @@ const PrevButton = styled.button`
         font-weight: 700;
         color: ${colors.black};
     }
+    
 `;
 const NextButton = styled.button`
     width: 80px;
@@ -163,7 +261,9 @@ class Shoes extends Component {
     state = {
         shopItems:  this.items.map( item => (
             <ItemCarousel>
-                <TypeOfBoots>{item.title}</TypeOfBoots>
+                <TextBlock>
+                    <TextBoots>{item.title}</TextBoots>
+                </TextBlock>
                 <Image src={item.image} />
                 <PriceButtonBlock>
                     <Price><Dolar>$</Dolar> {item.price}</Price>
