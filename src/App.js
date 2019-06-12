@@ -3,6 +3,9 @@ import styled from 'styled-components';
 import { colors } from './template/colors';
 import { BrowserRouter as Router, Route} from "react-router-dom";
 
+import { createStore } from 'redux';
+import { Provider } from 'react-redux';
+
 import Nav from './components/Nav/Nav';
 import Shoes from './components/Shoes/Shoes';
 import Clothing from './components/Clothing/Clothing';

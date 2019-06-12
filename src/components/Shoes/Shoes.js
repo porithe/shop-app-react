@@ -29,8 +29,6 @@ const ShoesBlock = styled.div`
     }
     @media (min-width: 1281px) {
         height: calc(100vh - 180px);
-        justify-content: flex-start;
-        padding-top: 50px;
     }
 `;
 const ItemCarousel = styled.div`
@@ -86,7 +84,7 @@ const TextBoots = styled.h2`
         font-size: 3.1rem;
     }
     @media (min-width: 1281px) {
-        font-size: 3.5rem;
+        font-size: 3.8rem;
     }
 `;
 const PriceButtonBlock = styled.div`
@@ -99,6 +97,9 @@ const PriceButtonBlock = styled.div`
     @media (min-width: 768px) {
         padding: 0;
         width: 85%;
+    }
+    @media (min-width: 1281px) {
+        margin-bottom: 100px;
     }
 `;
 const Price = styled.h2`
