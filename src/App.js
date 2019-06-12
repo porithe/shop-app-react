@@ -20,19 +20,44 @@ const AppBlock = styled.div`
     background-color: ${colors.background};
 `;
 
+const defaultState = {
+    cart: [],
+};
+
+function reducer(state = defaultState, action) {
+    switch(action.type) {
+        case 'ADD TO CART':
+            return {
+                ...state,
+                cart: [...state.cart, action.item],
+            };
+        case 'REMOVE FROM CART':
+            return {
+
+            };
+        default: {
+            return state;
+        }
+    }
+
+}
+
+const store = createStore(reducer);
 
 const App = () => (
 
-    <Router>
-        <AppBlock>
-            <Nav />
-            <Route exact path="/" component={Shoes} />
-            <Route path={"/clothing"} component={Clothing} />
-            <Route path={"/accessories"} component={Accessories} />
-            <Route path={"/lookbook"} component={Lookbook} />
-            <Route path={"/shopcart"} component={Shopcart} />
-        </AppBlock>
-    </Router>
+    <Provider store={store}>
+        <Router>
+            <AppBlock>
+                <Nav />
+                <Route exact path="/" component={Shoes} />
+                <Route path={"/clothing"} component={Clothing} />
+                <Route path={"/accessories"} component={Accessories} />
+                <Route path={"/lookbook"} component={Lookbook} />
+                <Route path={"/shopcart"} component={Shopcart} />
+            </AppBlock>
+        </Router>
+    </Provider>
 
 );
 

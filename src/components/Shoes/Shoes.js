@@ -4,6 +4,8 @@ import AliceCarousel from 'react-alice-carousel'
 import "./alice-carousel.css"
 import { colors } from '../../template/colors';
 
+import { connect } from 'react-redux';
+
 import nmdgrey from '../../photos/nmdr1grey.jpg';
 import adizero from '../../photos/adizerotakumi.jpg';
 import deerupt from '../../photos/deerupt.jpg';
@@ -58,7 +60,7 @@ const Image = styled.img`
     }
 `;
 const TextBlock = styled.div`
-    width: 200px;
+    width: 240px;
     padding: 10px;
     text-align: center;
     @media (min-width: 481px) and (max-width: 767px) {
@@ -259,6 +261,13 @@ class Shoes extends Component {
         },
     ];
 
+    addToCart = (item) => {
+        this.props.dispatch({
+            type: 'ADD TO CART',
+            item: item,
+        });
+    };
+
     state = {
         shopItems:  this.items.map( item => (
             <ItemCarousel>
@@ -268,7 +277,7 @@ class Shoes extends Component {
                 <Image src={item.image} />
                 <PriceButtonBlock>
                     <Price><Dolar>$</Dolar> {item.price}</Price>
-                    <AddToCartButton />
+                    <AddToCartButton onClick={() => this.addToCart(item)} />
                 </PriceButtonBlock>
             </ItemCarousel>
         )),
@@ -291,4 +300,10 @@ class Shoes extends Component {
     }
 }
 
-export default Shoes;
+function mapStateToProps(state){
+    return {
+        cart: state.cart,
+    }
+}
+
+export default connect(mapStateToProps)(Shoes);
