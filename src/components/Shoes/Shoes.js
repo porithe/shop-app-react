@@ -228,6 +228,9 @@ const NextButton = styled.button`
 `;
 
 class Shoes extends Component {
+
+
+
     items = [
         {
             title: 'ADIDAS NMD_R1 PRIMEKNIT.',
@@ -260,14 +263,6 @@ class Shoes extends Component {
             price: 260,
         },
     ];
-
-    addToCart = (item) => {
-        this.props.dispatch({
-            type: 'ADD TO CART',
-            item: item,
-        });
-    };
-
     state = {
         shopItems:  this.items.map( item => (
             <ItemCarousel>
@@ -281,7 +276,27 @@ class Shoes extends Component {
                 </PriceButtonBlock>
             </ItemCarousel>
         )),
+        id: 0,
     };
+
+    addToCart = (item) => {
+
+        const itemObj = {
+            title: item.title,
+            price: item.price,
+            id: this.state.id,
+        };
+
+        this.props.dispatch({
+            type: 'ADD TO CART',
+            item: itemObj,
+            price: item.price,
+        });
+        this.setState({
+            id: this.state.id + 1,
+        });
+    };
+
 
     render() {
 

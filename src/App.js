@@ -22,6 +22,7 @@ const AppBlock = styled.div`
 
 const defaultState = {
     cart: [],
+    fullPrice: 0,
 };
 
 function reducer(state = defaultState, action) {
@@ -30,11 +31,13 @@ function reducer(state = defaultState, action) {
             return {
                 ...state,
                 cart: [...state.cart, action.item],
+                fullPrice: state.fullPrice + action.price,
             };
         case 'REMOVE FROM CART':
-            return {
-
-            };
+            return Object.assign({}, state, {
+                cart: [...state.cart.filter(item => item.id !== action.id)],
+                fullPrice: state.fullPrice - action.price,
+            });
         default: {
             return state;
         }
