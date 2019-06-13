@@ -276,6 +276,21 @@ class Clothing extends Component {
         id: 0,
     };
 
+    addToCart = (item) => {
+
+        const itemObj = {
+            title: item.title,
+            price: item.price,
+            id: this.props.id,
+        };
+        console.log(this.props.id);
+        this.props.dispatch({
+            type: 'ADD TO CART',
+            item: itemObj,
+            price: item.price,
+        });
+    };
+
     render() {
         return (
             <ClothingBlock>
@@ -293,6 +308,7 @@ class Clothing extends Component {
 function mapStateToProps(state){
     return {
         cart: state.cart,
+        id: state.id,
     }
 }
 
