@@ -3,8 +3,9 @@
   <component name="ChangeListManager">
     <list default="true" id="d27345a0-f6fa-43ac-9aa8-5bc742c711f3" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Clothing/Clothing.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Clothing/Clothing.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/Shoes/Shoes.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Shoes/Shoes.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Shoes/alice-carousel.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/alice-carousel.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/Shopcart/Shopcart.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Shopcart/Shopcart.js" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
@@ -33,8 +34,17 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/components/Shoes/Shoes.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="6624">
-              <caret line="288" lean-forward="true" selection-start-line="288" selection-end-line="288" />
+            <state relative-caret-position="46">
+              <caret line="2" selection-start-line="2" selection-end-line="2" selection-end-column="48" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/components/Clothing/Clothing.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1024">
+              <caret line="91" column="22" selection-start-line="91" selection-start-column="22" selection-end-line="91" selection-end-column="22" />
               <folding>
                 <element signature="e#0#39#0" expanded="true" />
               </folding>
@@ -42,11 +52,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/components/Shopcart/Shopcart.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="460">
-              <caret line="20" column="49" selection-start-line="20" selection-start-column="49" selection-end-line="20" selection-end-column="49" />
+            <state relative-caret-position="-816">
+              <caret line="151" column="20" lean-forward="true" selection-start-line="151" selection-start-column="20" selection-end-line="151" selection-end-column="20" />
               <folding>
                 <element signature="e#0#39#0" expanded="true" />
               </folding>
@@ -62,7 +72,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/components/Clothing/Clothing.js" />
         <option value="$PROJECT_DIR$/src/components/Accessories/Accessories.js" />
         <option value="$PROJECT_DIR$/src/components/Lookbook/Lookbook.js" />
         <option value="$PROJECT_DIR$/src/template/colors.js" />
@@ -72,9 +81,10 @@
         <option value="$PROJECT_DIR$/node_modules/react-alice-carousel/lib/alice-carousel.css" />
         <option value="$PROJECT_DIR$/node_modules/react-alice-carousel/lib/scss/alice-carousel.scss" />
         <option value="$PROJECT_DIR$/src/components/Shoes/alice-carousel.css" />
-        <option value="$PROJECT_DIR$/src/components/Shoes/Shoes.js" />
         <option value="$PROJECT_DIR$/src/App.js" />
         <option value="$PROJECT_DIR$/src/components/Shopcart/Shopcart.js" />
+        <option value="$PROJECT_DIR$/src/components/Shoes/Shoes.js" />
+        <option value="$PROJECT_DIR$/src/components/Clothing/Clothing.js" />
       </list>
     </option>
   </component>
@@ -110,6 +120,18 @@
               <item name="shop-app-react" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="shop-app-react" type="b2602c69:ProjectViewProjectNode" />
+              <item name="shop-app-react" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="components" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="shop-app-react" type="b2602c69:ProjectViewProjectNode" />
+              <item name="shop-app-react" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="photos" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
@@ -119,13 +141,18 @@
   <component name="PropertiesComponent">
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/components" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/components" />
+    </key>
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -158,18 +185,18 @@
       <workItem from="1560167133944" duration="10546000" />
       <workItem from="1560330548759" duration="5014000" />
       <workItem from="1560345481625" duration="2724000" />
-      <workItem from="1560419884305" duration="3883000" />
+      <workItem from="1560419884305" duration="9005000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="58358000" />
+    <option name="totallyTimeSpent" value="63480000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="56" y="34" width="1252" height="1406" extended-state="4" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" weight="0.21485624" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.21485624" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="npm" order="2" side_tool="true" />
       <window_info id="Favorites" order="3" side_tool="true" />
@@ -224,13 +251,6 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/components/Clothing/Clothing" />
-    <entry file="file://$PROJECT_DIR$/src/components/Clothing/Clothing.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="138">
-          <caret line="6" column="27" lean-forward="true" selection-start-line="6" selection-start-column="27" selection-end-line="6" selection-end-column="27" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/components/Lookbook/Lookbook.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="138">
@@ -307,20 +327,27 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/Shoes/Shoes.js">
+    <entry file="file://$PROJECT_DIR$/src/components/Shopcart/Shopcart.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="6624">
-          <caret line="288" lean-forward="true" selection-start-line="288" selection-end-line="288" />
+        <state relative-caret-position="-816">
+          <caret line="151" column="20" lean-forward="true" selection-start-line="151" selection-start-column="20" selection-end-line="151" selection-end-column="20" />
           <folding>
             <element signature="e#0#39#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/Shopcart/Shopcart.js">
+    <entry file="file://$PROJECT_DIR$/src/components/Shoes/Shoes.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="460">
-          <caret line="20" column="49" selection-start-line="20" selection-start-column="49" selection-end-line="20" selection-end-column="49" />
+        <state relative-caret-position="46">
+          <caret line="2" selection-start-line="2" selection-end-line="2" selection-end-column="48" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/Clothing/Clothing.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1024">
+          <caret line="91" column="22" selection-start-line="91" selection-start-column="22" selection-end-line="91" selection-end-column="22" />
           <folding>
             <element signature="e#0#39#0" expanded="true" />
           </folding>

@@ -10,7 +10,6 @@ const ShopcartBlock = styled.div`
     display: flex;
     justify-content: center;
 `;
-
 const Cart = styled.div`
     margin-top: 40px;
     margin-bottom: 20px;
@@ -20,6 +19,12 @@ const Cart = styled.div`
     border: 2px solid ${colors.black};
     @media (min-width: 310px) and (max-width: 340px) {
         width: 310px;
+    }
+    @media (min-width: 481px) and (max-width: 767px) {
+        width: 400px;  
+    }
+    @media (min-width: 768px) {
+        width: 700px;
     }
 `;
 const CostBlock = styled.div`
@@ -40,12 +45,27 @@ const CostBlock = styled.div`
         height: 1px;
         background-color: ${colors.black};
     }
+    @media (min-width: 481px) and (max-width: 767px) {
+        height: 65px;
+        justify-content: space-evenly;
+    }
+    @media (min-width: 768px) {
+        height: 70px;
+        justify-content: center;
+    }
 `;
 const PriceText = styled.h2`
     font-weight: 400;
     color: ${colors.black};
     font-size: 1.8rem;
     padding-left: 15px;
+    @media (min-width: 481px) and (max-width: 767px) {
+        font-size: 2rem;
+    }
+    @media (min-width: 768px) {
+        font-size: 2.3rem;
+        padding-right: 40px;
+    }
 `;
 const PriceBlock = styled.div`
     display: flex;
@@ -55,18 +75,30 @@ const Cost = styled.h2`
     color: ${colors.black};
     font-size: 1.8rem;
     font-weight: 400;
+    @media (min-width: 481px) and (max-width: 767px) {
+        font-size: 2rem;
+    }
+    @media (min-width: 768px) {
+        font-size: 2.3rem;
+    }
 `;
 const Dolar = styled.span`
     color: ${colors.green};
     font-size: 2.2rem;
     font-weight: 600;
     padding-right: 5px;
+    @media (min-width: 481px) and (max-width: 767px) {
+        font-size: 2.4rem;
+    }
+    @media (min-width: 768px) {
+        font-size: 2.7rem;
+    }
 `;
 const Item = styled.div`
     width: 100%;
     height: 65px;
     position: relative;
-    padding: 0 10px 0 17px;
+    padding: 0 10px 0 20px;
     display: flex;
     justify-content: flex-start;
     align-items: center;
@@ -80,10 +112,23 @@ const Item = styled.div`
         height: 1px;
         background-color: ${colors.black};
     }
+    @media (min-width: 481px) and (max-width: 767px) {
+        height: 80px;
+    }
+    @media (min-width: 768px) {
+        height: 85px;
+        justify-content: center;
+    }
 `;
 const ItemName = styled.h2`
     font-size: 1.2rem;
     font-weight: 400;
+    @media (min-width: 481px) and (max-width: 767px) {
+        font-size: 1.45rem;
+    }
+    @media (min-width: 768px) {
+        font-size: 2rem;
+    }
 `;
 const RemoveButton = styled.div`
     width: 30px;
@@ -113,6 +158,31 @@ const RemoveButton = styled.div`
         background-color: ${colors.black};
         transform: rotate(135deg);
     }
+    @media (min-width: 481px) and (max-width: 767px) {
+        width: 45px;
+        height: 45px;
+        ::after {
+            width: 45px;
+            top: 22.5px;
+        }
+        ::before {
+            width: 45px;
+            top: 22.5px;
+        }
+    }
+    @media (min-width: 768px) {
+        right: 30px;
+        width: 50px;
+        height: 50px;
+        ::after {
+            width: 50px;
+            top: 25px;
+        }
+        ::before {
+            width: 50px;
+            top: 25px;
+        }
+    }
 `;
 
 class Shopcart extends Component {
@@ -141,10 +211,6 @@ class Shopcart extends Component {
                             <Cost>{this.props.fullPrice}</Cost>
                         </PriceBlock>
                     </CostBlock>
-                    <Item>
-                        <ItemName>NMD_R1 PRIMEKNIT.</ItemName>
-                        <RemoveButton />
-                    </Item>
                     {
                         this.props.cart.map( item => (
                             <Item key={item.id}>

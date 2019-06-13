@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
 import styled from 'styled-components';
 import AliceCarousel from 'react-alice-carousel'
-import "./alice-carousel.css"
+import "../alice-carousel.css"
 import { colors } from '../../template/colors';
 
 import { connect } from 'react-redux';
