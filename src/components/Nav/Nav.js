@@ -258,7 +258,7 @@ class Nav extends Component {
                     <StyledLink onClick={hideNav} to={"/"}>shoes</StyledLink>
                     <StyledLink onClick={hideNav} to={"/clothing"}>clothing</StyledLink>
                     <StyledLink onClick={hideNav} to={"/accessories"}>accessories</StyledLink>
-                    <StyledLink onClick={hideNav} to={"/lookbook"}>lookbook</StyledLink>
+                    <StyledLink onClick={hideNav} to={"/watches"}>watches</StyledLink>
                 </Links>
 
                 <ShopCart to={"/shopcart"} className="fas fa-shopping-cart"></ShopCart>

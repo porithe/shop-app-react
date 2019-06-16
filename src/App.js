@@ -10,7 +10,7 @@ import Nav from './components/Nav/Nav';
 import Shoes from './components/Shoes/Shoes';
 import Clothing from './components/Clothing/Clothing';
 import Accessories from './components/Accessories/Accessories';
-import Lookbook from './components/Lookbook/Lookbook';
+import Watches from './components/Watches/Watches';
 import Shopcart from './components/Shopcart/Shopcart';
 
 
@@ -58,7 +58,7 @@ const App = () => (
                 <Route exact path="/" component={Shoes} />
                 <Route path={"/clothing"} component={Clothing} />
                 <Route path={"/accessories"} component={Accessories} />
-                <Route path={"/lookbook"} component={Lookbook} />
+                <Route path={"/watches"} component={Watches} />
                 <Route path={"/shopcart"} component={Shopcart} />
             </AppBlock>
         </Router>
