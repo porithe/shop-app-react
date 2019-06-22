@@ -8,7 +8,7 @@ Live demo: https://reverent-hermann-c44a88.netlify.com/
 
 ## Informations
 
-I'm still learning :)
+Shop app made in React, you can add items to cart and remove from cart.
 
 ## Stack
 
